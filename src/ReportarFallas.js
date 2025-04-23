@@ -9,12 +9,7 @@ import Navbar from './Navbar'; // Asegúrate de tener el Navbar importado
 
 const ReportarFallas = () => {
   const [maquinas, setMaquinas] = useState([]);
-  const [tiposFalla] = useState([
-    'Fallo eléctrico',
-    'Mantenimiento preventivo',
-    'Fallo mecánico',
-    'Otro',
-  ]);
+  
   const [reporte, setReporte] = useState({
     empleado_id: 1,
     maquina_id: '',

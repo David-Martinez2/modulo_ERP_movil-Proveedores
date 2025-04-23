@@ -23,7 +23,7 @@ import {
   TableRow,
   TableFooter
 } from '@mui/material';
-import { AddCircle, RemoveCircle } from '@mui/icons-material';
+
 
 const PuntoVenta = () => {
   const [cliente, setCliente] = useState({ nombre: '', telefono: '' });
@@ -221,7 +221,7 @@ const PuntoVenta = () => {
                       color="error"
                       onClick={() => handleEliminarProducto(producto.producto_id)}
                     >
-                      <RemoveCircle />
+                      
                     </IconButton>
                   </TableCell>
                 </TableRow>
