@@ -23,6 +23,7 @@ import {
   TableRow,
   TableFooter
 } from '@mui/material';
+import Navbar from './Navbar';
 
 
 const PuntoVenta = () => {
@@ -123,6 +124,8 @@ const PuntoVenta = () => {
   };
 
   return (
+   <>
+     <Navbar />
     <Box sx={{ maxWidth: 'lg', margin: 'auto', padding: 3 }}>
       <Paper sx={{ padding: 3 }}>
         <Typography variant="h5" align="center" gutterBottom>
@@ -258,7 +261,10 @@ const PuntoVenta = () => {
         </Snackbar>
       </Paper>
     </Box>
+    </>
   );
+  
+  
 };
 
 export default PuntoVenta;
