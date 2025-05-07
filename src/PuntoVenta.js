@@ -82,7 +82,6 @@ const PuntoVenta = () => {
       ]);
     }
   };
-
   const handleEliminarProducto = (id) => {
     setProductosSeleccionados(prev =>
       prev.filter(p => p.producto_id !== id)
