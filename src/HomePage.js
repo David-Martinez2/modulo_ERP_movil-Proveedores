@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import InventoryIcon from '@mui/icons-material/Inventory';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -37,6 +39,7 @@ const HomePage = () => {
             gap: 2,
             width: '100%',
             justifyContent: 'center',
+            flexWrap: 'wrap'
           }}
         >
           <Card
@@ -92,6 +95,63 @@ const HomePage = () => {
               </CardContent>
             </CardActionArea>
           </Card>
+          
+          
+<Card
+  sx={{
+    width: '45%', 
+    height: '180px',
+    borderRadius: 3,
+    boxShadow: 5,
+    backgroundColor: '#ffffff',
+  }}
+>
+  <CardActionArea onClick={() => handleNavigation('/proveedores')}>
+    <CardContent
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%',
+      }}
+    >
+      <LocalShippingIcon sx={{ fontSize: 50, color: '#ff9800' }} /> 
+      <Typography variant="h6" sx={{ mt: 2, fontWeight: 'medium' }}>
+        Proveedores
+      </Typography>
+    </CardContent>
+  </CardActionArea>
+</Card>
+
+
+<Card
+    sx={{
+      width: '45%',
+      height: '180px',
+      borderRadius: 3,
+      boxShadow: 5,
+      backgroundColor: '#ffffff',
+    }}
+  >
+    <CardActionArea onClick={() => handleNavigation('/entradas-inventario')}>
+      <CardContent
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+        }}
+      >
+        <InventoryIcon sx={{ fontSize: 50, color: '#4caf50' }} /> {/* Color verde */}
+        <Typography variant="h6" sx={{ mt: 2, fontWeight: 'medium' }}>
+          Entradas de Inventario
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+          
         </Box>
       </Box>
     </>

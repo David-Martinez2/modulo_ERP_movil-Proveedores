@@ -1,0 +1,126 @@
+/* Estilos generales del contenedor del módulo de proveedores */
+.proveedores-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto; /* Centra el contenedor */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.proveedores-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* Estilos para el botón de agregar nuevo proveedor */
+.btn-add-proveedor {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px auto; /* Centra el botón y le da margen inferior */
+    padding: 10px 20px;
+    background-color: #007bff; /* Color primario de Bootstrap */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.btn-add-proveedor:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de la lista de tarjetas de proveedores */
+.proveedores-list {
+    display: grid;
+    /* Crea columnas que se ajustan automáticamente, mínimo 280px, máximo 1fr */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta de proveedor */
+.proveedor-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja las acciones hacia abajo */
+}
+
+.proveedor-card h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.proveedor-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Contenedor de acciones (botones) dentro de la tarjeta */
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos generales para los botones de acción */
+.btn-action {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-decoration: none; /* Para Link (React Router) */
+    text-align: center;
+    flex-grow: 1; /* Permite que los botones se expandan y ocupen el espacio disponible */
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+/* Estilos específicos para el botón Editar */
+.btn-action.edit {
+    background-color: #28a745; /* Verde de Bootstrap */
+    color: white;
+}
+
+.btn-action.edit:hover {
+    background-color: #218838;
+}
+
+/* Estilos específicos para el botón Eliminar */
+.btn-action.delete {
+    background-color: #dc3545; /* Rojo de Bootstrap */
+    color: white;
+}
+
+.btn-action.delete:hover {
+    background-color: #c82333;
+}
+
+/* Estilos específicos para el botón Ver Estimados */
+.btn-action.view-estimados {
+    background-color: #17a2b8; /* Cyan de Bootstrap */
+    color: white;
+}
+
+.btn-action.view-estimados:hover {
+    background-color: #138496;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
